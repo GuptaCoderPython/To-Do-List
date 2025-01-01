@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID">
+</head>
+<body>
+  <header>
+    <h1 id="welcome">Welcome</h1>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <button id="sign-out" onclick="signOut()" hidden>Sign Out</button>
+  </header>
+  <main>
+    <section class="todo-app">
+      <h2>Manage Your Tasks</h2>
+      <div class="input-section">
+        <input type="text" id="task-title" placeholder="Task id" />
+
+
+        <input type="text" id="task-description" placeholder="Task name" />
+
+        <button id="add-task-btn">Add Task</button>
+      </div>
+      <div class="task-container">
+        <h3>Active Tasks</h3>
+        <ul id="task-list"></ul>
+      </div>
+      <button id="recover-task-btn">Recover Task</button>
+    </section>
+  </main>
+  <footer>
+    <p>Designed by Neeraj Gupta</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
